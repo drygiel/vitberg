@@ -225,36 +225,12 @@ Ale najważniejsze są opinie użytkowników
 
 [Poznaj więcej opinii](https://www.vitberg.com/info/opinie-pacjentow.html)
 
-Warto z nami pracować
-
-Szukamy fajnych ludzi, którzy mogliby się  
-spełnić pracując i pomagając innym.
-
-Aktualnie poszukujemy:
-
-*   magazyniera z doświadczeniem ...najlepiej ze znajomością języka niemieckiego :-)
-*   fizjoterapeutów do prowadzenia Poradni Vitberg w całej Polsce
-*   pracowników do obsługi platformy komunikacji z pacjentem- najlepiej po fizjoterapii :-)
-*   konstruktorów CAD
-
-Dowiedz się kogo poszukujemy
-
-[Wyślij CV](#)
-
-Spotkajmy się!
-
-Umów się na spotkanie z nami
-
-[Skontaktuj się z nami](https://www.vitberg.com/info/kontakt.html)
-
-[
-
-![](/img/cms/Vitberg%20RS2/B7601003-2-BW-kor.jpg)
+[](/img/cms/Vitberg%20RS2/B7601003-2-BW-kor.jpg)
 
 ## Dowiedz się więcej o nas
 
 JESZCZE WIĘCEJ INFORMACJI O VITBERG
 
-](https://www.vitberg.com/info/csr-spoleczna-odpowiedzialnosc-biznesu.html)
+https://www.vitberg.com/info/csr-spoleczna-odpowiedzialnosc-biznesu.html
 
 [](https://pl-pl.facebook.com/vitberg)[](https://www.youtube.com/channel/UC6T_Z-aatuXWTH0LynfBWbw?view_as=subscriber)[](https://pl.linkedin.com/company/vitberg)
