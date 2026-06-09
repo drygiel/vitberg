@@ -39,3 +39,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# local chrome profile and logs
+/.chrome-profile/
+/chrome-start.log
