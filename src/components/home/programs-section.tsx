@@ -6,6 +6,7 @@ import {
   type LucideIcon,
 } from "lucide-react";
 
+import { RevealStagger } from "@/components/shared/reveal";
 import { SectionHeading } from "@/components/shared/section-heading";
 import { buttonVariants } from "@/components/ui/button";
 import {
@@ -30,7 +31,7 @@ export function ProgramsSection() {
       <div className="mx-auto max-w-6xl px-4 lg:px-6">
         <SectionHeading title="Nasze usługi" />
 
-        <div className="mt-12 grid gap-6 md:grid-cols-3">
+        <RevealStagger className="mt-12 grid gap-6 md:grid-cols-3">
           {programs.map((program) => {
             const Icon = iconMap[program.icon];
             return (
@@ -71,7 +72,7 @@ export function ProgramsSection() {
               </Card>
             );
           })}
-        </div>
+        </RevealStagger>
 
         <div className="mt-8 text-center">
           <Link

@@ -1,5 +1,6 @@
 import Link from "next/link";
 
+import { RevealStagger } from "@/components/shared/reveal";
 import { SectionHeading } from "@/components/shared/section-heading";
 import { buttonVariants } from "@/components/ui/button";
 import {
@@ -21,7 +22,7 @@ export function ModulesSection() {
           subtitle="Precyzyjne dopasowanie terapii do Twoich dolegliwości — system SKOT (Skierowanych Oscylacji Terapeutycznych)."
         />
 
-        <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <RevealStagger className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {modules.map((mod) => (
             <Card
               key={mod.href}
@@ -46,7 +47,7 @@ export function ModulesSection() {
               </CardFooter>
             </Card>
           ))}
-        </div>
+        </RevealStagger>
 
         <p className="mt-8 text-center">
           <Link

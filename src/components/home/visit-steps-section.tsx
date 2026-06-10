@@ -1,3 +1,4 @@
+import { RevealStagger } from "@/components/shared/reveal";
 import { SectionHeading } from "@/components/shared/section-heading";
 import { visitSteps } from "@/lib/site-config";
 
@@ -10,7 +11,10 @@ export function VisitStepsSection() {
           subtitle="Prosty proces krok po kroku — bez stresu i bez zobowiązań."
         />
 
-        <ol className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <RevealStagger
+          as="ol"
+          className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4"
+        >
           {visitSteps.map((step) => (
             <li
               key={step.step}
@@ -27,7 +31,7 @@ export function VisitStepsSection() {
               </p>
             </li>
           ))}
-        </ol>
+        </RevealStagger>
       </div>
     </section>
   );

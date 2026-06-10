@@ -1,3 +1,4 @@
+import { Reveal } from "@/components/shared/reveal";
 import { SectionHeading } from "@/components/shared/section-heading";
 import { BookingForm } from "@/components/shared/booking-form";
 import { siteConfig } from "@/lib/site-config";
@@ -16,15 +17,15 @@ export function ContactSection() {
             <iframe
               title="Mapa — Poradnia Vitberg Chełm"
               src="https://maps.google.com/maps?q=Che%C5%82m%20Polska&t=&z=14&ie=UTF8&iwloc=&output=embed"
-              className="aspect-[16/7] w-full border-0 grayscale-[30%]"
+              className="aspect-16/7 w-full border-0 grayscale-30%"
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
             />
           </div>
 
-          <div className="relative z-10 mx-auto -mt-16 max-w-xl px-4 md:-mt-20">
+          <Reveal duration={2000} className="relative z-10 mx-auto -mt-16 max-w-xl px-4 md:-mt-20">
             <BookingForm />
-          </div>
+          </Reveal>
         </div>
 
         <p className="mt-8 text-center text-primary-foreground/90">

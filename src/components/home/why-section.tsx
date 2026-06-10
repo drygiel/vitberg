@@ -9,6 +9,7 @@ import {
   type LucideIcon,
 } from "lucide-react";
 
+import { Reveal, RevealStagger } from "@/components/shared/reveal";
 import { SectionHeading } from "@/components/shared/section-heading";
 import { whyBenefits } from "@/lib/site-config";
 
@@ -25,7 +26,7 @@ export function WhySection() {
   return (
     <section id="dlaczego-warto" className="py-16 md:py-20">
       <div className="mx-auto grid max-w-6xl items-center gap-12 px-4 lg:grid-cols-2 lg:px-6">
-        <div className="relative aspect-4/5 overflow-hidden rounded-xl bg-secondary ring-1 ring-primary/20">
+        <Reveal duration={1000} className="relative aspect-4/5 overflow-hidden rounded-xl bg-secondary ring-1 ring-primary/20">
           <Image
             src="/images/active_seniors.png"
             alt="Aktywna para seniorów ciesząca się życiem"
@@ -33,7 +34,7 @@ export function WhySection() {
             sizes="(max-width: 1024px) 100vw, 528px"
             className="object-cover"
           />
-        </div>
+        </Reveal>
 
         <div>
           <SectionHeading title="Dlaczego warto?" className="text-left" />
@@ -48,7 +49,7 @@ export function WhySection() {
             praktyce medycznej.
           </p>
 
-          <ul className="mt-8 grid gap-4 sm:grid-cols-2">
+          <RevealStagger as="ul" className="mt-8 grid gap-4 sm:grid-cols-2">
             {whyBenefits.map((benefit) => {
               const Icon = iconMap[benefit.icon];
               return (
@@ -60,7 +61,7 @@ export function WhySection() {
                 </li>
               );
             })}
-          </ul>
+          </RevealStagger>
         </div>
       </div>
     </section>

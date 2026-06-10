@@ -107,6 +107,98 @@
   }
 }
 
+@keyframes reveal-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(1.25rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.reveal-stagger {
+  --reveal-duration: 0.55s;
+}
+
+.reveal-stagger > * {
+  opacity: 0;
+}
+
+.reveal-stagger--visible > * {
+  animation: reveal-fade-up var(--reveal-duration) cubic-bezier(0.22, 1, 0.36, 1)
+    forwards;
+}
+
+.reveal-stagger--visible > *:nth-child(1) {
+  animation-delay: 0ms;
+}
+
+.reveal-stagger--visible > *:nth-child(2) {
+  animation-delay: 70ms;
+}
+
+.reveal-stagger--visible > *:nth-child(3) {
+  animation-delay: 140ms;
+}
+
+.reveal-stagger--visible > *:nth-child(4) {
+  animation-delay: 210ms;
+}
+
+.reveal-stagger--visible > *:nth-child(5) {
+  animation-delay: 280ms;
+}
+
+.reveal-stagger--visible > *:nth-child(6) {
+  animation-delay: 350ms;
+}
+
+.reveal-stagger--visible > *:nth-child(7) {
+  animation-delay: 420ms;
+}
+
+.reveal-stagger--visible > *:nth-child(8) {
+  animation-delay: 490ms;
+}
+
+.reveal-stagger--visible > *:nth-child(9) {
+  animation-delay: 560ms;
+}
+
+.reveal-stagger--visible > *:nth-child(10) {
+  animation-delay: 630ms;
+}
+
+.reveal-stagger--visible > *:nth-child(11) {
+  animation-delay: 700ms;
+}
+
+.reveal-stagger--visible > *:nth-child(12) {
+  animation-delay: 770ms;
+}
+
+.reveal-item {
+  --reveal-duration: 0.6s;
+  opacity: 0;
+}
+
+.reveal-item--visible {
+  animation: reveal-fade-up var(--reveal-duration) cubic-bezier(0.22, 1, 0.36, 1)
+    forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal-stagger > *,
+  .reveal-item {
+    opacity: 1;
+    transform: none;
+    animation: none !important;
+  }
+}
+
 .dark {
   --background: oklch(0.145 0 0);
   --foreground: oklch(0.985 0 0);
