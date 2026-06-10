@@ -6,6 +6,8 @@ import { buttonVariants } from "@/components/ui/button";
 import type { Subpage } from "@/lib/pages";
 import { cn } from "@/lib/utils";
 
+import "./subpage-template.scss";
+
 type SubpageTemplateProps = {
   page: Subpage;
 };
@@ -13,36 +15,41 @@ type SubpageTemplateProps = {
 export function SubpageTemplate({ page }: SubpageTemplateProps) {
   return (
     <>
-      <section className="bg-secondary/60 py-12 md:py-16">
-        <div className="mx-auto max-w-4xl px-4 lg:px-6">
-          <nav aria-label="Breadcrumb" className="mb-6 text-sm">
-            <ol className="flex items-center gap-1 text-muted-foreground">
+      <section className="subpage-template__hero">
+        <div className="subpage-template__hero-container">
+          <nav aria-label="Breadcrumb" className="subpage-template__breadcrumb">
+            <ol className="subpage-template__breadcrumb-list">
               <li>
-                <Link href="/" className="hover:text-primary">
+                <Link href="/" className="subpage-template__breadcrumb-link">
                   Strona główna
                 </Link>
               </li>
-              <ChevronRight className="size-4" aria-hidden />
-              <li className="font-medium text-foreground">{page.breadcrumb}</li>
+              <ChevronRight
+                className="subpage-template__breadcrumb-separator"
+                aria-hidden
+              />
+              <li className="subpage-template__breadcrumb-current">
+                {page.breadcrumb}
+              </li>
             </ol>
           </nav>
-          <h1 className="font-heading text-3xl font-extrabold tracking-wide text-primary uppercase md:text-4xl">
-            {page.title}
-          </h1>
-          <p className="mt-4 text-lg text-muted-foreground">{page.description}</p>
+          <h1 className="subpage-template__title">{page.title}</h1>
+          <p className="subpage-template__description">{page.description}</p>
         </div>
       </section>
 
-      <section className="py-12 md:py-16">
-        <div className="mx-auto max-w-4xl space-y-12 px-4 lg:px-6">
+      <section className="subpage-template__content">
+        <div className="subpage-template__content-container">
           {page.sections.map((section) => (
             <article key={section.title}>
-              <h2 className="font-heading text-xl font-bold text-primary md:text-2xl">
+              <h2 className="subpage-template__section-title">
                 {section.title}
               </h2>
-              <p className="mt-4 text-lg leading-relaxed">{section.content}</p>
+              <p className="subpage-template__section-content">
+                {section.content}
+              </p>
               {section.items && (
-                <ul className="mt-4 list-inside list-disc space-y-2 text-lg">
+                <ul className="subpage-template__section-list">
                   {section.items.map((item) => (
                     <li key={item}>{item}</li>
                   ))}
@@ -54,15 +61,15 @@ export function SubpageTemplate({ page }: SubpageTemplateProps) {
       </section>
 
       {page.cta && (
-        <section className="bg-secondary/40 py-12 md:py-16">
-          <div className="mx-auto max-w-xl px-4 lg:px-6">
+        <section className="subpage-template__cta">
+          <div className="subpage-template__cta-container">
             <BookingForm />
-            <div className="mt-6 text-center">
+            <div className="subpage-template__cta-footer">
               <Link
                 href="/"
                 className={cn(
                   buttonVariants({ variant: "link" }),
-                  "font-semibold text-primary"
+                  "subpage-template__back-link"
                 )}
               >
                 ← Wróć na stronę główną

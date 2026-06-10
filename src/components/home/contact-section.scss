@@ -1,0 +1,40 @@
+@reference "../../app/globals.css";
+
+.contact-section {
+  @apply bg-primary py-16 md:py-20;
+}
+
+.contact-section__container {
+  @apply mx-auto max-w-6xl px-4 lg:px-6;
+}
+
+.contact-section__heading {
+  & h2 {
+    @apply text-primary-foreground;
+  }
+}
+
+.contact-section__map-wrapper {
+  @apply relative mt-12;
+}
+
+.contact-section__map-frame {
+  @apply overflow-hidden rounded-2xl bg-primary-foreground/10 ring-1 ring-white/20;
+}
+
+.contact-section__map {
+  @apply aspect-16/7 w-full border-0;
+  filter: grayscale(30%);
+}
+
+.contact-section__form {
+  @apply relative z-10 mx-auto -mt-16 max-w-xl px-4 md:-mt-20;
+}
+
+.contact-section__phone-text {
+  @apply mt-8 text-center text-primary-foreground/90;
+}
+
+.contact-section__phone-link {
+  @apply font-bold underline-offset-2 hover:underline;
+}

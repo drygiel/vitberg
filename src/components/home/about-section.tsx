@@ -2,12 +2,14 @@ import Link from "next/link";
 
 import { SectionHeading } from "@/components/shared/section-heading";
 
+import "./about-section.scss";
+
 export function AboutSection() {
   return (
-    <section className="py-16 md:py-20">
-      <div className="mx-auto max-w-4xl px-4 lg:px-6">
+    <section className="about-section">
+      <div className="about-section__container">
         <SectionHeading title="Kim jesteśmy" />
-        <div className="mt-8 space-y-6 text-lg leading-relaxed">
+        <div className="about-section__content">
           <p>
             Vitberg to polska firma, która od ponad 30 lat wyznacza standardy
             wibroterapii. Nasze aparaty są certyfikowanymi wyrobami medycznymi
@@ -18,7 +20,7 @@ export function AboutSection() {
             Chełma i okolic w naszej lokalnej Poradni.
           </p>
           <p>
-            <Link href="/o-nas" className="font-semibold text-primary underline-offset-2 hover:underline">
+            <Link href="/o-nas" className="about-section__link">
               Dowiedz się więcej o nas →
             </Link>
           </p>

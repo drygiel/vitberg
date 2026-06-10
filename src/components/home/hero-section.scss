@@ -1,0 +1,33 @@
+@reference "../../app/globals.css";
+
+.hero-section {
+  @apply relative min-h-[min(90vh,800px)] w-full overflow-hidden;
+}
+
+.hero-section__image {
+  @apply object-cover object-[center_30%];
+}
+
+.hero-section__overlay {
+  @apply absolute inset-0 bg-[radial-gradient(ellipse_115%_160%_at_0%_0%,rgba(250,248,245,0.90)_40%,transparent_80%)];
+}
+
+.hero-section__content {
+  @apply relative z-10 mx-auto flex min-h-[min(90vh,800px)] max-w-6xl items-center px-4 py-16 lg:px-6 lg:py-24;
+}
+
+.hero-section__text {
+  @apply max-w-xl space-y-6 md:max-w-2xl;
+}
+
+.hero-section__title {
+  @apply font-heading text-3xl font-extrabold leading-tight tracking-wide text-primary uppercase md:text-4xl lg:text-5xl;
+}
+
+.hero-section__description {
+  @apply text-lg leading-relaxed text-foreground [text-shadow:0_0_10px_white];
+}
+
+.hero-section__cta {
+  @apply h-14 rounded-full px-8 text-base font-bold tracking-wide uppercase;
+}

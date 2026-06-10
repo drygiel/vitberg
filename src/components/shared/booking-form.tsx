@@ -10,6 +10,9 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { cn } from "@/lib/utils";
+
+import "./booking-form.scss";
 
 type BookingFormProps = {
   className?: string;
@@ -18,29 +21,26 @@ type BookingFormProps = {
 
 export function BookingForm({ className, id }: BookingFormProps) {
   return (
-    <Card
-      id={id}
-      className={`border-2 border-primary shadow-xl ${className ?? ""}`}
-    >
-      <CardHeader className="text-center">
-        <CardTitle className="font-heading text-xl font-bold tracking-wide text-primary uppercase md:text-2xl">
+    <Card id={id} className={cn("booking-form", className)}>
+      <CardHeader className="booking-form__header">
+        <CardTitle className="booking-form__title">
           Zamów bezpłatną konsultację
         </CardTitle>
-        <CardDescription className="text-base text-foreground">
+        <CardDescription className="booking-form__description">
           Wpisz swoje dane. Oddzwonimy w ciągu 24 godzin, aby ustalić najwygodniejszy
           dla Ciebie termin bezpłatnej wizyty.
         </CardDescription>
       </CardHeader>
       <CardContent>
         <form
-          className="space-y-4"
+          className="booking-form__form"
           onSubmit={(e) => {
             e.preventDefault();
           }}
         >
-          <div className="grid gap-4 sm:grid-cols-2">
-            <div className="space-y-2">
-              <Label htmlFor="name" className="text-base font-semibold">
+          <div className="booking-form__fields">
+            <div className="booking-form__field">
+              <Label htmlFor="name" className="booking-form__label">
                 Imię i nazwisko
               </Label>
               <Input
@@ -48,11 +48,11 @@ export function BookingForm({ className, id }: BookingFormProps) {
                 name="name"
                 required
                 placeholder="Jan Kowalski"
-                className="h-12 text-base"
+                className="booking-form__input"
               />
             </div>
-            <div className="space-y-2">
-              <Label htmlFor="phone" className="text-base font-semibold">
+            <div className="booking-form__field">
+              <Label htmlFor="phone" className="booking-form__label">
                 Numer telefonu
               </Label>
               <Input
@@ -61,14 +61,11 @@ export function BookingForm({ className, id }: BookingFormProps) {
                 type="tel"
                 required
                 placeholder="500 000 000"
-                className="h-12 text-base"
+                className="booking-form__input"
               />
             </div>
           </div>
-          <Button
-            type="submit"
-            className="h-12 w-full rounded-full text-base font-bold tracking-wide uppercase"
-          >
+          <Button type="submit" className="booking-form__submit">
             Zamów bezpłatną konsultację
           </Button>
         </form>

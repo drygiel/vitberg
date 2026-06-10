@@ -1,0 +1,73 @@
+@reference "../../app/globals.css";
+
+.subpage-template__hero {
+  @apply bg-secondary/60 py-12 md:py-16;
+}
+
+.subpage-template__hero-container {
+  @apply mx-auto max-w-4xl px-4 lg:px-6;
+}
+
+.subpage-template__breadcrumb {
+  @apply mb-6 text-sm;
+}
+
+.subpage-template__breadcrumb-list {
+  @apply flex items-center gap-1 text-muted-foreground;
+}
+
+.subpage-template__breadcrumb-link {
+  @apply hover:text-primary;
+}
+
+.subpage-template__breadcrumb-separator {
+  @apply size-4;
+}
+
+.subpage-template__breadcrumb-current {
+  @apply font-medium text-foreground;
+}
+
+.subpage-template__title {
+  @apply font-heading text-3xl font-extrabold tracking-wide text-primary uppercase md:text-4xl;
+}
+
+.subpage-template__description {
+  @apply mt-4 text-lg text-muted-foreground;
+}
+
+.subpage-template__content {
+  @apply py-12 md:py-16;
+}
+
+.subpage-template__content-container {
+  @apply mx-auto max-w-4xl space-y-12 px-4 lg:px-6;
+}
+
+.subpage-template__section-title {
+  @apply font-heading text-xl font-bold text-primary md:text-2xl;
+}
+
+.subpage-template__section-content {
+  @apply mt-4 text-lg leading-relaxed;
+}
+
+.subpage-template__section-list {
+  @apply mt-4 list-inside list-disc space-y-2 text-lg;
+}
+
+.subpage-template__cta {
+  @apply bg-secondary/40 py-12 md:py-16;
+}
+
+.subpage-template__cta-container {
+  @apply mx-auto max-w-xl px-4 lg:px-6;
+}
+
+.subpage-template__cta-footer {
+  @apply mt-6 text-center;
+}
+
+.subpage-template__back-link {
+  @apply font-semibold text-primary;
+}

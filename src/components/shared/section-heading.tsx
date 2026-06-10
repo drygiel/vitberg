@@ -1,5 +1,7 @@
 import { cn } from "@/lib/utils";
 
+import "./section-heading.scss";
+
 type SectionHeadingProps = {
   title: string;
   subtitle?: string;
@@ -14,15 +16,12 @@ export function SectionHeading({
   id,
 }: SectionHeadingProps) {
   return (
-    <div className={cn("mx-auto max-w-3xl text-center", className)}>
-      <h2
-        id={id}
-        className="font-heading text-2xl font-bold tracking-wide text-primary uppercase md:text-3xl"
-      >
+    <div className={cn("section-heading", className)}>
+      <h2 id={id} className="section-heading__title">
         {title}
       </h2>
       {subtitle && (
-        <p className="mt-4 text-lg text-muted-foreground">{subtitle}</p>
+        <p className="section-heading__subtitle">{subtitle}</p>
       )}
     </div>
   );

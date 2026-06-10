@@ -13,33 +13,34 @@ import {
 import { modules } from "@/lib/site-config";
 import { cn } from "@/lib/utils";
 
+import "./modules-section.scss";
+
 export function ModulesSection() {
   return (
-    <section className="bg-secondary/40 py-16 md:py-20">
-      <div className="mx-auto max-w-6xl px-4 lg:px-6">
+    <section className="modules-section">
+      <div className="modules-section__container">
         <SectionHeading
           title="Moduły celowane"
           subtitle="Precyzyjne dopasowanie terapii do Twoich dolegliwości — system SKOT (Skierowanych Oscylacji Terapeutycznych)."
         />
 
-        <RevealStagger className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <RevealStagger className="modules-section__grid">
           {modules.map((mod) => (
-            <Card
-              key={mod.href}
-              className="border border-primary/20 bg-card transition-shadow hover:shadow-md"
-            >
+            <Card key={mod.href} className="modules-section__card">
               <CardHeader>
-                <CardTitle className="font-heading text-lg font-bold text-primary">
+                <CardTitle className="modules-section__card-title">
                   {mod.title}
                 </CardTitle>
               </CardHeader>
-              <CardContent className="text-base">{mod.description}</CardContent>
-              <CardFooter className="border-0 bg-transparent pb-4">
+              <CardContent className="modules-section__card-content">
+                {mod.description}
+              </CardContent>
+              <CardFooter className="modules-section__card-footer">
                 <Link
                   href={mod.href}
                   className={cn(
                     buttonVariants({ variant: "link" }),
-                    "px-0 font-semibold text-primary"
+                    "modules-section__card-link"
                   )}
                 >
                   Czytaj więcej →
@@ -49,10 +50,10 @@ export function ModulesSection() {
           ))}
         </RevealStagger>
 
-        <p className="mt-8 text-center">
+        <p className="modules-section__footer-link">
           <Link
             href="/zastosowanie"
-            className="font-semibold text-primary underline-offset-2 hover:underline"
+            className="modules-section__footer-link-anchor"
           >
             Zobacz wszystkie zastosowania →
           </Link>

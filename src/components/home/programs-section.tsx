@@ -19,6 +19,8 @@ import {
 import { programs } from "@/lib/site-config";
 import { cn } from "@/lib/utils";
 
+import "./programs-section.scss";
+
 const iconMap: Record<string, LucideIcon> = {
   brain: Brain,
   droplets: Droplets,
@@ -27,46 +29,41 @@ const iconMap: Record<string, LucideIcon> = {
 
 export function ProgramsSection() {
   return (
-    <section id="uslugi" className="bg-background py-16 md:py-20">
-      <div className="mx-auto max-w-6xl px-4 lg:px-6">
+    <section id="uslugi" className="programs-section">
+      <div className="programs-section__container">
         <SectionHeading title="Nasze usługi" />
 
-        <RevealStagger className="mt-12 grid gap-6 md:grid-cols-3">
+        <RevealStagger className="programs-section__grid">
           {programs.map((program) => {
             const Icon = iconMap[program.icon];
+            const isHighlight = "highlight" in program && program.highlight;
+
             return (
-              <Card
-                key={program.id}
-                className="flex flex-col border-2 border-primary/30 shadow-md transition-shadow hover:shadow-lg"
-              >
-                <CardHeader className="items-center text-center">
-                  <div className="mb-2 flex size-14 items-center justify-center rounded-xl bg-secondary text-primary">
-                    <Icon className="size-7" aria-hidden />
+              <Card key={program.id} className="programs-section__card">
+                <CardHeader className="programs-section__card-header">
+                  <div className="programs-section__card-icon">
+                    <Icon className="programs-section__card-icon-svg" aria-hidden />
                   </div>
-                  <CardTitle className="font-heading text-lg font-bold text-primary">
+                  <CardTitle className="programs-section__card-title">
                     {program.number}. {program.title}
-                    <span className="block text-base font-semibold">
+                    <span className="programs-section__card-subtitle">
                       {program.subtitle}
                     </span>
                   </CardTitle>
                 </CardHeader>
-                <CardContent className="flex-1 text-center text-base">
+                <CardContent className="programs-section__card-content">
                   {program.description}
                 </CardContent>
-                <CardFooter className="justify-center border-0 bg-transparent pb-6">
+                <CardFooter className="programs-section__card-footer">
                   <Link
                     href={program.href}
                     className={cn(
                       buttonVariants({ size: "lg" }),
-                      "rounded-full px-6 font-bold tracking-wide uppercase",
-                      "highlight" in program && program.highlight
-                        ? "bg-accent text-accent-foreground hover:bg-accent/90"
-                        : undefined
+                      "programs-section__card-cta",
+                      isHighlight && "programs-section__card-cta--highlight"
                     )}
                   >
-                    {"highlight" in program && program.highlight
-                      ? "Nasze usługi"
-                      : "Umów wizytę"}
+                    {isHighlight ? "Nasze usługi" : "Umów wizytę"}
                   </Link>
                 </CardFooter>
               </Card>
@@ -74,12 +71,12 @@ export function ProgramsSection() {
           })}
         </RevealStagger>
 
-        <div className="mt-8 text-center">
+        <div className="programs-section__footer">
           <Link
             href="/aparat-bazowy"
             className={cn(
               buttonVariants({ variant: "outline", size: "lg" }),
-              "rounded-full border-primary px-6 font-semibold text-primary"
+              "programs-section__footer-cta"
             )}
           >
             Poznaj aparat Vitberg RS2

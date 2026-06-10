@@ -13,6 +13,8 @@ import { Reveal, RevealStagger } from "@/components/shared/reveal";
 import { SectionHeading } from "@/components/shared/section-heading";
 import { whyBenefits } from "@/lib/site-config";
 
+import "./why-section.scss";
+
 const iconMap: Record<string, LucideIcon> = {
   "heart-pulse": HeartPulse,
   move: Move,
@@ -24,40 +26,42 @@ const iconMap: Record<string, LucideIcon> = {
 
 export function WhySection() {
   return (
-    <section id="dlaczego-warto" className="py-16 md:py-20">
-      <div className="mx-auto grid max-w-6xl items-center gap-12 px-4 lg:grid-cols-2 lg:px-6">
-        <Reveal duration={1000} className="relative aspect-4/5 overflow-hidden rounded-xl bg-secondary ring-1 ring-primary/20">
+    <section id="dlaczego-warto" className="why-section">
+      <div className="why-section__container">
+        <Reveal duration={1000} className="why-section__image-wrapper">
           <Image
             src="/images/active_seniors.png"
             alt="Aktywna para seniorów ciesząca się życiem"
             fill
             sizes="(max-width: 1024px) 100vw, 528px"
-            className="object-cover"
+            className="why-section__image"
           />
         </Reveal>
 
         <div>
-          <SectionHeading title="Dlaczego warto?" className="text-left" />
-          <p className="mt-6 text-lg leading-relaxed">
+          <SectionHeading title="Dlaczego warto?" />
+          <p className="why-section__intro">
             Metoda opiera się na ponad 76 badaniach własnych, tysiącach ankiet
             oraz publikacjach w prestiżowych pismach medycznych. Zabieg jest
             całkowicie bezpieczny, bezbolesny i bezwysiłkowy — pacjent po prostu
             leży i odpoczywa.
           </p>
-          <p className="mt-4 text-lg font-semibold text-primary">
+          <p className="why-section__highlight">
             Aż 96% fizjoterapeutów potwierdza skuteczność wibroterapii w codziennej
             praktyce medycznej.
           </p>
 
-          <RevealStagger as="ul" className="mt-8 grid gap-4 sm:grid-cols-2">
+          <RevealStagger as="ul" className="why-section__benefits">
             {whyBenefits.map((benefit) => {
               const Icon = iconMap[benefit.icon];
               return (
-                <li key={benefit.title} className="flex items-center gap-3">
-                  <span className="flex size-10 shrink-0 items-center justify-center rounded-xl bg-secondary text-primary">
-                    <Icon className="size-5" aria-hidden />
+                <li key={benefit.title} className="why-section__benefit">
+                  <span className="why-section__benefit-icon">
+                    <Icon className="why-section__benefit-icon-svg" aria-hidden />
                   </span>
-                  <span className="font-semibold">{benefit.title}</span>
+                  <span className="why-section__benefit-title">
+                    {benefit.title}
+                  </span>
                 </li>
               );
             })}

@@ -4,6 +4,7 @@ import { Montserrat, Inter } from "next/font/google";
 import { siteConfig } from "@/lib/site-config";
 
 import "./globals.css";
+import "./layout.scss";
 
 const inter = Inter({
   variable: "--font-sans",
@@ -32,7 +33,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pl" className={`${inter.variable} ${montserrat.variable}`}>
-      <body className="flex min-h-screen flex-col font-sans">{children}</body>
+      <body className="layout__body">{children}</body>
     </html>
   );
 }
