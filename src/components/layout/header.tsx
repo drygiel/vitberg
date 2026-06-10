@@ -3,43 +3,37 @@ import { Activity } from "lucide-react";
 
 import { HeaderBookingCta } from "@/components/layout/header-booking-cta";
 import { mainNav, siteConfig } from "@/lib/site-config";
-import { cn } from "@/lib/utils";
+
+import "./header.scss";
 
 export function Header() {
   return (
-    <header className="sticky top-0 z-50 border-b border-primary/10 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80">
-      <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-4 lg:px-6">
-        <Link href="/" className="flex items-center gap-2">
-          <Activity className="size-7 text-primary" aria-hidden />
-          <div className="leading-tight">
-            <span className="block font-heading text-sm font-bold tracking-wide text-primary uppercase">
-              Vitberg
-            </span>
-            <span className="block text-xs font-medium text-muted-foreground uppercase">
-              Chełm
-            </span>
+    <header className="header">
+      <div className="header__container">
+        <Link href="/" className="header__brand">
+          <Activity className="header__brand-icon" aria-hidden />
+          <div className="header__brand-text">
+            <span className="header__brand-name">Vitberg</span>
+            <span className="header__brand-location">Chełm</span>
           </div>
         </Link>
 
-        <nav
-          className="hidden items-center gap-6 lg:flex"
-          aria-label="Nawigacja główna"
-        >
+        <nav className="header__nav" aria-label="Nawigacja główna">
           {mainNav.map((item) => (
             <Link
               key={item.href}
               href={item.href}
-              className="text-sm font-semibold tracking-wide text-muted-foreground uppercase underline-offset-4 decoration-2 decoration-primary hover:text-primary hover:underline"
+              className="header__nav-link"
             >
               {item.label}
             </Link>
           ))}
         </nav>
 
-        <div className="flex items-center gap-3">
+        <div className="header__actions">
           <a
             href={`tel:${siteConfig.phone}`}
-            className="hidden text-sm font-semibold text-primary sm:block"
+            className="header__phone"
           >
             {siteConfig.phoneDisplay}
           </a>
@@ -47,18 +41,12 @@ export function Header() {
         </div>
       </div>
 
-      <nav
-        className="flex gap-1 overflow-x-auto border-t border-primary/10 px-4 py-2 lg:hidden"
-        aria-label="Nawigacja mobilna"
-      >
+      <nav className="header__mobile-nav" aria-label="Nawigacja mobilna">
         {mainNav.map((item) => (
           <Link
             key={item.href}
             href={item.href}
-            className={cn(
-              "shrink-0 rounded-full px-3 py-1.5 text-xs font-semibold tracking-wide uppercase",
-              "bg-secondary text-secondary-foreground"
-            )}
+            className="header__mobile-nav-link"
           >
             {item.label}
           </Link>
