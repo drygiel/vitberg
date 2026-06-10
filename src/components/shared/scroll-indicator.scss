@@ -1,0 +1,49 @@
+﻿@reference "../../app/globals.css";
+
+.scroll-indicator {
+    @apply pointer-events-none absolute inset-x-0 bottom-15 z-20 mx-auto flex w-fit flex-col items-center gap-1 text-primary;
+    transition: opacity 180ms ease, transform 180ms ease;
+}
+
+.scroll-indicator.is-hidden {
+    opacity: 0;
+    transform: translateY(6px);
+}
+
+.scroll-mouse {
+    @apply relative block h-9 w-6 rounded-full border-2 border-current;
+}
+
+.scroll-mouse::after {
+    content: '';
+    @apply absolute left-1/2 top-1 block h-2 w-1 -translate-x-1/2 rounded-full bg-current;
+    animation: hero-scroll-wheel 1.4s ease-in-out infinite;
+}
+
+.scroll-arrow {
+    animation: hero-scroll-bounce 1.4s ease-in-out infinite;
+}
+
+@keyframes hero-scroll-wheel {
+    0% {
+        opacity: 0;
+        transform: translate(0, 0);
+    }
+    30% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: translate(0, 12px);
+    }
+}
+
+@keyframes hero-scroll-bounce {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(4px);
+    }
+}

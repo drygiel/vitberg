@@ -236,7 +236,7 @@ export const subpages: Subpage[] = [
     ],
     cta: false,
   },
-];
+] as const;
 
 export const pageSlugs = subpages.map(p => p.slug);
 

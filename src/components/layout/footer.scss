@@ -38,6 +38,15 @@
 
 .footer__social-link {
     @apply flex size-10 items-center justify-center rounded-full bg-white/10 text-sm font-bold transition-colors hover:bg-white/20;
+
+    > svg { 
+        @apply fill-white;
+        margin: 2px;
+    }
+}
+
+.footer__social-icon {
+    @apply size-4;
 }
 
 .footer__nav {

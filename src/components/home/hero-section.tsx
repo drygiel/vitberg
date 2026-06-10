@@ -1,14 +1,15 @@
 import Image from 'next/image';
-import Link from 'next/link';
+import { HashScrollLink } from '@/components/shared/hash-scroll-link';
+import { ScrollIndicator } from '@/components/shared/scroll-indicator';
 import { buttonVariants } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import './hero-section.scss';
 
 export function HeroSection() {
   return (
-    <section className="hero-section">
+    <section id="hero" className="hero-section">
       <Image
-        src="/images/hero.png"
+        src="/images/hero.jpg"
         alt="Para seniorów podczas zabiegu wibroterapii Vitberg z terapeutą"
         fill
         priority
@@ -25,14 +26,16 @@ export function HeroSection() {
             Poznaj polską metodę rehabilitacji domowej, z której skorzystały już tysiące pacjentów.
             Odwiedź naszą Poradnię i wypróbuj urządzenia Vitberg RS2 zupełnie za darmo.
           </p>
-          <Link
+          <HashScrollLink
             href="/#kontakt"
             className={cn(buttonVariants({ size: 'lg' }), 'hero-section__cta')}
           >
             Zarezerwuj bezpłatne zabiegi testowe
-          </Link>
+          </HashScrollLink>
         </div>
       </div>
+
+      <ScrollIndicator />
     </section>
   );
 }

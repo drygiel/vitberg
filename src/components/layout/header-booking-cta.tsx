@@ -1,7 +1,7 @@
 'use client';
 
-import Link from 'next/link';
 import { useEffect, useState } from 'react';
+import { HashScrollLink } from '@/components/shared/hash-scroll-link';
 import { buttonVariants } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import './header-booking-cta.scss';
@@ -18,11 +18,11 @@ export function HeaderBookingCta() {
   }, []);
 
   return (
-    <Link
+    <HashScrollLink
       href="/#kontakt"
       className={cn(buttonVariants({ size: 'lg' }), 'header-booking-cta', atTop && 'cta-pulse')}
     >
       Umów wizytę
-    </Link>
+    </HashScrollLink>
   );
 }

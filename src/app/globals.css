@@ -105,6 +105,10 @@
     .font-heading {
         font-family: var(--font-heading), var(--font-sans), sans-serif;
     }
+
+    a:not([class]) {
+        @apply text-primary underline-offset-4 hover:underline;
+    }
 }
 
 @keyframes cta-pulse {

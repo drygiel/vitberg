@@ -2,4 +2,16 @@
 
 .site-layout__main {
     @apply flex-1;
+
+    section {
+        @apply py-16 md:py-20;
+
+        &:nth-child(even) {
+            @apply bg-background;
+        }
+
+        &:nth-child(odd) {
+            @apply bg-secondary/80;
+        }
+    }
 }

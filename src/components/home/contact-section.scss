@@ -1,7 +1,7 @@
 @reference "../../app/globals.css";
 
-.contact-section {
-    @apply bg-primary py-16 md:py-20;
+.contact-section#kontakt {
+    @apply bg-primary;
 }
 
 .contact-section__container {

@@ -1,6 +1,7 @@
 import { Activity } from 'lucide-react';
 import Link from 'next/link';
 import { HeaderBookingCta } from '@/components/layout/header-booking-cta';
+import { HashScrollLink } from '@/components/shared/hash-scroll-link';
 import { mainNav, siteConfig } from '@/lib/site-config';
 import './header.scss';
 
@@ -17,11 +18,17 @@ export function Header() {
         </Link>
 
         <nav className="header__nav" aria-label="Nawigacja główna">
-          {mainNav.map(item => (
-            <Link key={item.href} href={item.href} className="header__nav-link">
-              {item.label}
-            </Link>
-          ))}
+          {mainNav.map(item =>
+            item.href?.startsWith('/#') ? (
+              <HashScrollLink key={item.href} href={item.href} className="header__nav-link">
+                {item.label}
+              </HashScrollLink>
+            ) : (
+              <Link key={item.href} href={item.href} className="header__nav-link">
+                {item.label}
+              </Link>
+            ),
+          )}
         </nav>
 
         <div className="header__actions">
@@ -33,11 +40,17 @@ export function Header() {
       </div>
 
       <nav className="header__mobile-nav" aria-label="Nawigacja mobilna">
-        {mainNav.map(item => (
-          <Link key={item.href} href={item.href} className="header__mobile-nav-link">
-            {item.label}
-          </Link>
-        ))}
+        {mainNav.map(item =>
+          item.href?.startsWith('/#') ? (
+            <HashScrollLink key={item.href} href={item.href} className="header__mobile-nav-link">
+              {item.label}
+            </HashScrollLink>
+          ) : (
+            <Link key={item.href} href={item.href} className="header__mobile-nav-link">
+              {item.label}
+            </Link>
+          ),
+        )}
       </nav>
     </header>
   );

@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 export const siteConfig = {
   name: 'Vitberg Chełm',
   tagline: 'Poradnia Wibroterapii',
@@ -107,8 +109,13 @@ export const visitSteps = [
   },
   {
     step: 3,
-    title: 'Bezpłatny zabieg',
-    description: 'Testujesz materac Vitberg RS2 w komfortowych warunkach (ok. 20–30 minut).',
+    title: 'Bezpłatne zabiegi',
+    description: (
+      <>
+        Testujesz materac <Link href="/aparat-bazowy">Vitberg RS2</Link> w komfortowych warunkach
+        przez <b>7 dni</b>.
+      </>
+    ),
   },
   {
     step: 4,
