@@ -11,11 +11,11 @@ export default function HomePage() {
   return (
     <SiteLayout>
       <HeroSection />
-      <AboutSection />
+      <VisitStepsSection />
+      <WhySection />
       <ProgramsSection />
       <ModulesSection />
-      <WhySection />
-      <VisitStepsSection />
+      <AboutSection />
       <ContactSection />
     </SiteLayout>
   );

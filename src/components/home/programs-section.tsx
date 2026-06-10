@@ -23,7 +23,6 @@ export function ProgramsSection() {
         <RevealStagger className="programs-section__grid">
           {programs.map(program => {
             const Icon = iconMap[program.icon];
-            const isHighlight = 'highlight' in program && program.highlight;
 
             return (
               <Card key={program.id} className="programs-section__card">
@@ -42,13 +41,9 @@ export function ProgramsSection() {
                 <CardFooter className="programs-section__card-footer">
                   <Link
                     href={program.href}
-                    className={cn(
-                      buttonVariants({ size: 'lg' }),
-                      'programs-section__card-cta',
-                      isHighlight && 'programs-section__card-cta--highlight',
-                    )}
+                    className={cn(buttonVariants({ size: 'lg' }), 'programs-section__card-cta')}
                   >
-                    {isHighlight ? 'Nasze usługi' : 'Umów wizytę'}
+                    Więcej →
                   </Link>
                 </CardFooter>
               </Card>

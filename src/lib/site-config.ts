@@ -43,7 +43,6 @@ export const programs = [
       'Dla osób z problemem zimnych stóp i dłoni, żylakami, obrzękami nóg oraz nadciśnieniem. Poprawia przepływ krwi.',
     href: '/program-cardio',
     icon: 'droplets' as const,
-    highlight: true,
   },
   {
     id: 'oxy',

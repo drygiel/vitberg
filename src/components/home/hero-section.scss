@@ -9,7 +9,12 @@
 }
 
 .hero-section__overlay {
-    @apply absolute inset-0 bg-[radial-gradient(ellipse_115%_160%_at_0%_0%,rgba(250,248,245,0.90)_40%, transparent_80%)];
+    @apply absolute inset-0;
+    background: radial-gradient(
+        ellipse 115% 160% at 0% 0%,
+        rgba(250, 248, 245, 0.9) 40%,
+        transparent 80%
+    );
 }
 
 .hero-section__content {

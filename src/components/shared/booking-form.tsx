@@ -52,6 +52,7 @@ export function BookingForm({ className, id }: BookingFormProps) {
                 type="tel"
                 required
                 placeholder="500 000 000"
+                pattern="[0-9 +]{15}"
                 className="booking-form__input"
               />
             </div>

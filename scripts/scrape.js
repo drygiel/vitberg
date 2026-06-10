@@ -1,7 +1,7 @@
-const fs = require('fs');
-const path = require('path');
-const cheerio = require('cheerio');
-const TurndownService = require('turndown');
+import fs from 'fs';
+import path from 'path';
+import cheerio from 'cheerio';
+import TurndownService from 'turndown';
 
 const turndownService = new TurndownService({
   headingStyle: 'atx',
@@ -94,4 +94,5 @@ async function run() {
   }
 }
 
+// noinspection JSIgnoredPromiseFromCall
 run();

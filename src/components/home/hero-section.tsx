@@ -29,7 +29,7 @@ export function HeroSection() {
             href="/#kontakt"
             className={cn(buttonVariants({ size: 'lg' }), 'hero-section__cta')}
           >
-            Zarezerwuj bezpłatny zabieg testowy
+            Zarezerwuj bezpłatne zabiegi testowe
           </Link>
         </div>
       </div>

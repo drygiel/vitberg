@@ -9,6 +9,7 @@ const nextConfig: NextConfig = {
     unoptimized: true,
   },
   basePath: isGithubActions ? `/${repoName}` : undefined,
+  allowedDevOrigins: ['192.168.1.8'],
 };
 
 export default nextConfig;
