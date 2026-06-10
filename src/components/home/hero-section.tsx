@@ -1,10 +1,8 @@
-import Image from "next/image";
-import Link from "next/link";
-
-import { buttonVariants } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
-
-import "./hero-section.scss";
+import Image from 'next/image';
+import Link from 'next/link';
+import { buttonVariants } from '@/components/ui/button';
+import { cn } from '@/lib/utils';
+import './hero-section.scss';
 
 export function HeroSection() {
   return (
@@ -21,18 +19,15 @@ export function HeroSection() {
 
       <div className="hero-section__content">
         <div className="hero-section__text">
-          <h1 className="hero-section__title">
-            Bezpłatna wibroterapia w Chełmie
-          </h1>
+          <h1 className="hero-section__title">Bezpłatna wibroterapia w Chełmie</h1>
           <h2>Odzyskaj sprawność i zapomnij o bólu!</h2>
           <p className="hero-section__description">
-            Poznaj polską metodę rehabilitacji domowej, z której skorzystały już
-            tysiące pacjentów. Odwiedź naszą Poradnię i wypróbuj urządzenia
-            Vitberg RS2 zupełnie za darmo.
+            Poznaj polską metodę rehabilitacji domowej, z której skorzystały już tysiące pacjentów.
+            Odwiedź naszą Poradnię i wypróbuj urządzenia Vitberg RS2 zupełnie za darmo.
           </p>
           <Link
             href="/#kontakt"
-            className={cn(buttonVariants({ size: "lg" }), "hero-section__cta")}
+            className={cn(buttonVariants({ size: 'lg' }), 'hero-section__cta')}
           >
             Zarezerwuj bezpłatny zabieg testowy
           </Link>

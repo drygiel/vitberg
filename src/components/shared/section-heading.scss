@@ -1,13 +1,13 @@
 @reference "../../app/globals.css";
 
 .section-heading {
-  @apply mx-auto max-w-3xl text-center;
+    @apply mx-auto max-w-3xl text-center;
 }
 
 .section-heading__title {
-  @apply font-heading text-2xl font-bold tracking-wide text-primary uppercase md:text-3xl;
+    @apply font-heading text-2xl font-bold tracking-wide text-primary uppercase md:text-3xl;
 }
 
 .section-heading__subtitle {
-  @apply mt-4 text-lg text-muted-foreground;
+    @apply mt-4 text-lg text-muted-foreground;
 }

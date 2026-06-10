@@ -1,41 +1,41 @@
 @reference "../../app/globals.css";
 
 .modules-section {
-  @apply bg-secondary/40 py-16 md:py-20;
+    @apply bg-secondary/40 py-16 md:py-20;
 }
 
 .modules-section__container {
-  @apply mx-auto max-w-6xl px-4 lg:px-6;
+    @apply mx-auto max-w-6xl px-4 lg:px-6;
 }
 
 .modules-section__grid {
-  @apply mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3;
+    @apply mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3;
 }
 
 .modules-section__card {
-  @apply border border-primary/20 bg-card transition-shadow hover:shadow-md;
+    @apply border border-primary/20 bg-card transition-shadow hover:shadow-md;
 }
 
 .modules-section__card-title {
-  @apply font-heading text-lg font-bold text-primary;
+    @apply font-heading text-lg font-bold text-primary;
 }
 
 .modules-section__card-content {
-  @apply text-base;
+    @apply text-base;
 }
 
 .modules-section__card-footer {
-  @apply border-0 bg-transparent pb-4;
+    @apply border-0 bg-transparent pb-4;
 }
 
 .modules-section__card-link {
-  @apply px-0 font-semibold text-primary;
+    @apply px-0 font-semibold text-primary;
 }
 
 .modules-section__footer-link {
-  @apply mt-8 text-center;
+    @apply mt-8 text-center;
 }
 
 .modules-section__footer-link-anchor {
-  @apply font-semibold text-primary underline-offset-2 hover:underline;
+    @apply font-semibold text-primary underline-offset-2 hover:underline;
 }

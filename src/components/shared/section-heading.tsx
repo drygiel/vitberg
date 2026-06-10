@@ -1,6 +1,5 @@
-import { cn } from "@/lib/utils";
-
-import "./section-heading.scss";
+import { cn } from '@/lib/utils';
+import './section-heading.scss';
 
 type SectionHeadingProps = {
   title: string;
@@ -9,20 +8,13 @@ type SectionHeadingProps = {
   id?: string;
 };
 
-export function SectionHeading({
-  title,
-  subtitle,
-  className,
-  id,
-}: SectionHeadingProps) {
+export function SectionHeading({ title, subtitle, className, id }: SectionHeadingProps) {
   return (
-    <div className={cn("section-heading", className)}>
+    <div className={cn('section-heading', className)}>
       <h2 id={id} className="section-heading__title">
         {title}
       </h2>
-      {subtitle && (
-        <p className="section-heading__subtitle">{subtitle}</p>
-      )}
+      {subtitle && <p className="section-heading__subtitle">{subtitle}</p>}
     </div>
   );
 }

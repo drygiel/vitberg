@@ -1,49 +1,49 @@
 @reference "../../app/globals.css";
 
 .why-section {
-  @apply py-16 md:py-20;
+    @apply py-16 md:py-20;
 }
 
 .why-section__container {
-  @apply mx-auto grid max-w-6xl items-center gap-12 px-4 lg:grid-cols-2 lg:px-6;
+    @apply mx-auto grid max-w-6xl items-center gap-12 px-4 lg:grid-cols-2 lg:px-6;
 }
 
 .why-section__image-wrapper {
-  @apply relative aspect-4/5 overflow-hidden rounded-xl bg-secondary ring-1 ring-primary/20;
+    @apply relative aspect-4/5 overflow-hidden rounded-xl bg-secondary ring-1 ring-primary/20;
 }
 
 .why-section__image {
-  @apply object-cover;
+    @apply object-cover;
 }
 
 .why-section .section-heading {
-  @apply text-left;
+    @apply text-left;
 }
 
 .why-section__intro {
-  @apply mt-6 text-lg leading-relaxed;
+    @apply mt-6 text-lg leading-relaxed;
 }
 
 .why-section__highlight {
-  @apply mt-4 text-lg font-semibold text-primary;
+    @apply mt-4 text-lg font-semibold text-primary;
 }
 
 .why-section__benefits {
-  @apply mt-8 grid gap-4 sm:grid-cols-2;
+    @apply mt-8 grid gap-4 sm:grid-cols-2;
 }
 
 .why-section__benefit {
-  @apply flex items-center gap-3;
+    @apply flex items-center gap-3;
 }
 
 .why-section__benefit-icon {
-  @apply flex size-10 shrink-0 items-center justify-center rounded-xl bg-secondary text-primary;
+    @apply flex size-10 shrink-0 items-center justify-center rounded-xl bg-secondary text-primary;
 }
 
 .why-section__benefit-icon-svg {
-  @apply size-5;
+    @apply size-5;
 }
 
 .why-section__benefit-title {
-  @apply font-semibold;
+    @apply font-semibold;
 }

@@ -1,41 +1,41 @@
 @reference "../../app/globals.css";
 
 .booking-form {
-  @apply border-2 border-primary shadow-xl;
+    @apply border-2 border-primary shadow-xl;
 }
 
 .booking-form__header {
-  @apply text-center;
+    @apply text-center;
 }
 
 .booking-form__title {
-  @apply font-heading text-xl font-bold tracking-wide text-primary uppercase md:text-2xl;
+    @apply font-heading text-xl font-bold tracking-wide text-primary uppercase md:text-2xl;
 }
 
 .booking-form__description {
-  @apply text-base text-foreground;
+    @apply text-base text-foreground;
 }
 
 .booking-form__form {
-  @apply space-y-4;
+    @apply space-y-4;
 }
 
 .booking-form__fields {
-  @apply grid gap-4 sm:grid-cols-2;
+    @apply grid gap-4 sm:grid-cols-2;
 }
 
 .booking-form__field {
-  @apply space-y-2;
+    @apply space-y-2;
 }
 
 .booking-form__label {
-  @apply text-base font-semibold;
+    @apply text-base font-semibold;
 }
 
 .booking-form__input {
-  @apply h-12 text-base;
+    @apply h-12 text-base;
 }
 
 .booking-form__submit {
-  @apply h-12 w-full rounded-full text-base font-bold tracking-wide uppercase;
+    @apply h-12 w-full rounded-full text-base font-bold tracking-wide uppercase;
 }

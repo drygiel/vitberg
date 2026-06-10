@@ -1,18 +1,11 @@
-"use client";
+'use client';
 
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import { cn } from "@/lib/utils";
-
-import "./booking-form.scss";
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Input } from '@/components/ui/input';
+import { Label } from '@/components/ui/label';
+import { cn } from '@/lib/utils';
+import './booking-form.scss';
 
 type BookingFormProps = {
   className?: string;
@@ -21,20 +14,18 @@ type BookingFormProps = {
 
 export function BookingForm({ className, id }: BookingFormProps) {
   return (
-    <Card id={id} className={cn("booking-form", className)}>
+    <Card id={id} className={cn('booking-form', className)}>
       <CardHeader className="booking-form__header">
-        <CardTitle className="booking-form__title">
-          Zamów bezpłatną konsultację
-        </CardTitle>
+        <CardTitle className="booking-form__title">Zamów bezpłatną konsultację</CardTitle>
         <CardDescription className="booking-form__description">
-          Wpisz swoje dane. Oddzwonimy w ciągu 24 godzin, aby ustalić najwygodniejszy
-          dla Ciebie termin bezpłatnej wizyty.
+          Wpisz swoje dane. Oddzwonimy w ciągu 24 godzin, aby ustalić najwygodniejszy dla Ciebie
+          termin bezpłatnej wizyty.
         </CardDescription>
       </CardHeader>
       <CardContent>
         <form
           className="booking-form__form"
-          onSubmit={(e) => {
+          onSubmit={e => {
             e.preventDefault();
           }}
         >

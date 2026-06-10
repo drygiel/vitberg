@@ -1,18 +1,14 @@
-import { Reveal } from "@/components/shared/reveal";
-import { SectionHeading } from "@/components/shared/section-heading";
-import { BookingForm } from "@/components/shared/booking-form";
-import { siteConfig } from "@/lib/site-config";
-
-import "./contact-section.scss";
+import { BookingForm } from '@/components/shared/booking-form';
+import { Reveal } from '@/components/shared/reveal';
+import { SectionHeading } from '@/components/shared/section-heading';
+import { siteConfig } from '@/lib/site-config';
+import './contact-section.scss';
 
 export function ContactSection() {
   return (
     <section id="kontakt" className="contact-section">
       <div className="contact-section__container">
-        <SectionHeading
-          title="Znajdź nas w Twoim mieście"
-          className="contact-section__heading"
-        />
+        <SectionHeading title="Znajdź nas w Twoim mieście" className="contact-section__heading" />
 
         <div className="contact-section__map-wrapper">
           <div className="contact-section__map-frame">
@@ -31,11 +27,8 @@ export function ContactSection() {
         </div>
 
         <p className="contact-section__phone-text">
-          Lub zadzwoń bezpośrednio:{" "}
-          <a
-            href={`tel:${siteConfig.phone}`}
-            className="contact-section__phone-link"
-          >
+          Lub zadzwoń bezpośrednio:{' '}
+          <a href={`tel:${siteConfig.phone}`} className="contact-section__phone-link">
             {siteConfig.phoneDisplay}
           </a>
         </p>

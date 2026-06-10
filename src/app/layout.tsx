@@ -1,20 +1,18 @@
-import type { Metadata } from "next";
-import { Montserrat, Inter } from "next/font/google";
-
-import { siteConfig } from "@/lib/site-config";
-
-import "./globals.css";
-import "./layout.scss";
+import type { Metadata } from 'next';
+import { Inter, Montserrat } from 'next/font/google';
+import { siteConfig } from '@/lib/site-config';
+import './globals.css';
+import './layout.scss';
 
 const inter = Inter({
-  variable: "--font-sans",
-  subsets: ["latin", "latin-ext"],
+  variable: '--font-sans',
+  subsets: ['latin', 'latin-ext'],
 });
 
 const montserrat = Montserrat({
-  variable: "--font-heading",
-  subsets: ["latin", "latin-ext"],
-  weight: ["600", "700", "800"],
+  variable: '--font-heading',
+  subsets: ['latin', 'latin-ext'],
+  weight: ['600', '700', '800'],
 });
 
 export const metadata: Metadata = {
@@ -23,7 +21,7 @@ export const metadata: Metadata = {
     template: `%s | ${siteConfig.name}`,
   },
   description:
-    "Bezpłatna wibroterapia w Chełmie. Poradnia Vitberg RS2 — odzyskaj sprawność i zapomnij o bólu!",
+    'Bezpłatna wibroterapia w Chełmie. Poradnia Vitberg RS2 — odzyskaj sprawność i zapomnij o bólu!',
 };
 
 export default function RootLayout({

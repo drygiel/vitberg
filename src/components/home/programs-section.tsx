@@ -1,25 +1,12 @@
-import Link from "next/link";
-import {
-  Brain,
-  Droplets,
-  Wind,
-  type LucideIcon,
-} from "lucide-react";
-
-import { RevealStagger } from "@/components/shared/reveal";
-import { SectionHeading } from "@/components/shared/section-heading";
-import { buttonVariants } from "@/components/ui/button";
-import {
-  Card,
-  CardContent,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import { programs } from "@/lib/site-config";
-import { cn } from "@/lib/utils";
-
-import "./programs-section.scss";
+import { Brain, Droplets, type LucideIcon, Wind } from 'lucide-react';
+import Link from 'next/link';
+import { RevealStagger } from '@/components/shared/reveal';
+import { SectionHeading } from '@/components/shared/section-heading';
+import { buttonVariants } from '@/components/ui/button';
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
+import { programs } from '@/lib/site-config';
+import { cn } from '@/lib/utils';
+import './programs-section.scss';
 
 const iconMap: Record<string, LucideIcon> = {
   brain: Brain,
@@ -34,9 +21,9 @@ export function ProgramsSection() {
         <SectionHeading title="Nasze usługi" />
 
         <RevealStagger className="programs-section__grid">
-          {programs.map((program) => {
+          {programs.map(program => {
             const Icon = iconMap[program.icon];
-            const isHighlight = "highlight" in program && program.highlight;
+            const isHighlight = 'highlight' in program && program.highlight;
 
             return (
               <Card key={program.id} className="programs-section__card">
@@ -46,9 +33,7 @@ export function ProgramsSection() {
                   </div>
                   <CardTitle className="programs-section__card-title">
                     {program.number}. {program.title}
-                    <span className="programs-section__card-subtitle">
-                      {program.subtitle}
-                    </span>
+                    <span className="programs-section__card-subtitle">{program.subtitle}</span>
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="programs-section__card-content">
@@ -58,12 +43,12 @@ export function ProgramsSection() {
                   <Link
                     href={program.href}
                     className={cn(
-                      buttonVariants({ size: "lg" }),
-                      "programs-section__card-cta",
-                      isHighlight && "programs-section__card-cta--highlight"
+                      buttonVariants({ size: 'lg' }),
+                      'programs-section__card-cta',
+                      isHighlight && 'programs-section__card-cta--highlight',
                     )}
                   >
-                    {isHighlight ? "Nasze usługi" : "Umów wizytę"}
+                    {isHighlight ? 'Nasze usługi' : 'Umów wizytę'}
                   </Link>
                 </CardFooter>
               </Card>
@@ -75,8 +60,8 @@ export function ProgramsSection() {
           <Link
             href="/aparat-bazowy"
             className={cn(
-              buttonVariants({ variant: "outline", size: "lg" }),
-              "programs-section__footer-cta"
+              buttonVariants({ variant: 'outline', size: 'lg' }),
+              'programs-section__footer-cta',
             )}
           >
             Poznaj aparat Vitberg RS2

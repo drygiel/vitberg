@@ -1,53 +1,53 @@
 @reference "../../app/globals.css";
 
 .footer {
-  @apply bg-primary text-primary-foreground;
+    @apply bg-primary text-primary-foreground;
 }
 
 .footer__container {
-  @apply mx-auto grid max-w-6xl gap-8 px-4 py-12 lg:grid-cols-3 lg:px-6;
+    @apply mx-auto grid max-w-6xl gap-8 px-4 py-12 lg:grid-cols-3 lg:px-6;
 }
 
 .footer__column {
-  @apply space-y-3;
+    @apply space-y-3;
 }
 
 .footer__row {
-  @apply flex items-start gap-3;
+    @apply flex items-start gap-3;
 }
 
 .footer__icon {
-  @apply mt-1 size-5 shrink-0;
+    @apply mt-1 size-5 shrink-0;
 }
 
 .footer__label {
-  @apply font-semibold;
+    @apply font-semibold;
 }
 
 .footer__phone-link {
-  @apply text-lg font-bold underline-offset-2 hover:underline;
+    @apply text-lg font-bold underline-offset-2 hover:underline;
 }
 
 .footer__social-section {
-  @apply space-y-4;
+    @apply space-y-4;
 }
 
 .footer__social-links {
-  @apply flex gap-3;
+    @apply flex gap-3;
 }
 
 .footer__social-link {
-  @apply flex size-10 items-center justify-center rounded-full bg-white/10 text-sm font-bold transition-colors hover:bg-white/20;
+    @apply flex size-10 items-center justify-center rounded-full bg-white/10 text-sm font-bold transition-colors hover:bg-white/20;
 }
 
 .footer__nav {
-  @apply flex flex-wrap gap-x-4 gap-y-1 text-sm text-white/80;
+    @apply flex flex-wrap gap-x-4 gap-y-1 text-sm text-white/80;
 }
 
 .footer__nav-link {
-  @apply hover:text-white;
+    @apply hover:text-white;
 }
 
 .footer__copyright {
-  @apply border-t border-white/10 py-4 text-center text-sm text-white/70;
+    @apply border-t border-white/10 py-4 text-center text-sm text-white/70;
 }

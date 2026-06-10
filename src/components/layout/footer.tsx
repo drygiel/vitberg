@@ -1,14 +1,12 @@
-import Link from "next/link";
-import { Clock, MapPin, Phone } from "lucide-react";
-
-import { siteConfig } from "@/lib/site-config";
-
-import "./footer.scss";
+import { Clock, MapPin, Phone } from 'lucide-react';
+import Link from 'next/link';
+import { siteConfig } from '@/lib/site-config';
+import './footer.scss';
 
 const socialLinks = [
-  { label: "Facebook", href: siteConfig.social.facebook, abbr: "Fb" },
-  { label: "Instagram", href: siteConfig.social.instagram, abbr: "Ig" },
-  { label: "YouTube", href: siteConfig.social.youtube, abbr: "Yt" },
+  { label: 'Facebook', href: siteConfig.social.facebook, abbr: 'Fb' },
+  { label: 'Instagram', href: siteConfig.social.instagram, abbr: 'Ig' },
+  { label: 'YouTube', href: siteConfig.social.youtube, abbr: 'Yt' },
 ] as const;
 
 export function Footer() {
@@ -31,10 +29,7 @@ export function Footer() {
             <Phone className="footer__icon" aria-hidden />
             <div>
               <p className="footer__label">Telefon</p>
-              <a
-                href={`tel:${siteConfig.phone}`}
-                className="footer__phone-link"
-              >
+              <a href={`tel:${siteConfig.phone}`} className="footer__phone-link">
                 {siteConfig.phoneDisplay}
               </a>
             </div>
@@ -51,18 +46,20 @@ export function Footer() {
         <div className="footer__social-section">
           <p className="footer__label">Śledź nas</p>
           <div className="footer__social-links">
-            {socialLinks.map((social) => (
-              <a
-                key={social.label}
-                href={social.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={social.label}
-                className="footer__social-link"
-              >
-                {social.abbr}
-              </a>
-            ))}
+            {socialLinks
+              .filter(l => l.href)
+              .map(social => (
+                <a
+                  key={social.label}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={social.label}
+                  className="footer__social-link"
+                >
+                  {social.abbr}
+                </a>
+              ))}
           </div>
           <div className="footer__nav">
             <Link href="/o-nas" className="footer__nav-link">
@@ -70,9 +67,6 @@ export function Footer() {
             </Link>
             <Link href="/o-terapii" className="footer__nav-link">
               O terapii
-            </Link>
-            <Link href="/wspolpraca" className="footer__nav-link">
-              Współpraca
             </Link>
             <Link href="/kariera" className="footer__nav-link">
               Kariera

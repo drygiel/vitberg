@@ -1,63 +1,63 @@
 @reference "../../app/globals.css";
 
 .header {
-  @apply sticky top-0 z-50 border-b border-primary/10 bg-background/95 backdrop-blur supports-backdrop-filter:bg-background/80;
+    @apply sticky top-0 z-50 border-b border-primary/10 bg-background/95 backdrop-blur supports-backdrop-filter:bg-background/80;
 }
 
 .header__container {
-  @apply mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-4 lg:px-6;
+    @apply mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-4 lg:px-6;
 }
 
 .header__brand {
-  @apply flex items-center gap-2 rounded-sm transition-transform duration-200 ease-out hover:scale-105;
+    @apply flex items-center gap-2 rounded-sm transition-transform duration-200 ease-out hover:scale-105;
+
+    &:hover .header__brand-location {
+        @apply text-primary;
+    }
 }
 
 .header__brand-icon {
-  @apply size-7 text-primary;
-}
-
-.header__brand:hover .header__brand-location {
-  @apply text-primary;
+    @apply size-7 text-primary;
 }
 
 .header__brand-text {
-  @apply leading-tight;
+    @apply leading-tight;
 }
 
 .header__brand-name {
-  @apply block font-heading text-sm font-bold tracking-wide text-primary uppercase;
+    @apply block font-heading text-sm font-bold tracking-wide text-primary uppercase;
 }
 
 .header__brand-location {
-  @apply block text-xs font-medium text-muted-foreground uppercase transition-colors duration-200;
+    @apply block text-xs font-medium text-muted-foreground uppercase transition-colors duration-200;
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .header__brand {
-    @apply hover:scale-100;
-  }
+    .header__brand {
+        @apply hover:scale-100;
+    }
 }
 
 .header__nav {
-  @apply hidden items-center gap-6 lg:flex;
+    @apply hidden items-center gap-6 lg:flex;
 }
 
 .header__nav-link {
-  @apply text-sm font-semibold tracking-wide text-muted-foreground uppercase underline-offset-4 decoration-2 decoration-primary hover:text-primary hover:underline;
+    @apply text-sm font-semibold tracking-wide text-muted-foreground uppercase underline-offset-4 decoration-2 decoration-primary hover:text-primary hover:underline;
 }
 
 .header__actions {
-  @apply flex items-center gap-3;
+    @apply flex items-center gap-3;
 }
 
 .header__phone {
-  @apply hidden text-sm font-semibold text-primary sm:block;
+    @apply hidden text-sm font-semibold text-primary sm:block;
 }
 
 .header__mobile-nav {
-  @apply flex gap-1 overflow-x-auto border-t border-primary/10 px-4 py-2 lg:hidden;
+    @apply flex gap-1 overflow-x-auto border-t border-primary/10 px-4 py-2 lg:hidden;
 }
 
 .header__mobile-nav-link {
-  @apply shrink-0 rounded-full px-3 py-1.5 text-xs font-semibold tracking-wide uppercase bg-secondary text-secondary-foreground;
+    @apply shrink-0 rounded-full px-3 py-1.5 text-xs font-semibold tracking-wide uppercase bg-secondary text-secondary-foreground;
 }

@@ -1,17 +1,17 @@
 @reference "../../app/globals.css";
 
 .about-section {
-  @apply py-16 md:py-20;
+    @apply py-16 md:py-20;
 }
 
 .about-section__container {
-  @apply mx-auto max-w-4xl px-4 lg:px-6;
+    @apply mx-auto max-w-4xl px-4 lg:px-6;
 }
 
 .about-section__content {
-  @apply mt-8 space-y-6 text-lg leading-relaxed;
+    @apply mt-8 space-y-6 text-lg leading-relaxed;
 }
 
 .about-section__link {
-  @apply font-semibold text-primary underline-offset-2 hover:underline;
+    @apply font-semibold text-primary underline-offset-2 hover:underline;
 }

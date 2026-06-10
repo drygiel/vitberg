@@ -1,10 +1,10 @@
-import type { NextConfig } from "next";
+import type { NextConfig } from 'next';
 
-const isGithubActions = process.env.GITHUB_ACTIONS === "true";
-const repoName = "Vitberg";
+const isGithubActions = process.env.GITHUB_ACTIONS === 'true';
+const repoName = 'Vitberg';
 
 const nextConfig: NextConfig = {
-  output: "export",
+  output: 'export',
   images: {
     unoptimized: true,
   },

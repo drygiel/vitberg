@@ -1,19 +1,15 @@
-"use client"
+'use client';
 
-import * as React from "react"
+import type * as React from 'react';
+import { cn } from '@/lib/utils';
+import './label.scss';
 
-import { cn } from "@/lib/utils"
-
-import "./label.scss"
-
-function Label({ className, ...props }: React.ComponentProps<"label">) {
+function Label({ className, children, ...props }: React.ComponentProps<'label'>) {
   return (
-    <label
-      data-slot="label"
-      className={cn("label", className)}
-      {...props}
-    />
-  )
+    <label data-slot="label" className={cn('label', className)} {...props}>
+      {children}
+    </label>
+  );
 }
 
-export { Label }
+export { Label };

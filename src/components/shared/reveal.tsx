@@ -1,17 +1,16 @@
-"use client";
+'use client';
 
 import {
+  type ComponentPropsWithoutRef,
+  type CSSProperties,
   createElement,
+  type ElementType,
   useCallback,
   useEffect,
   useRef,
   useState,
-  type ComponentPropsWithoutRef,
-  type CSSProperties,
-  type ElementType,
-} from "react";
-
-import { cn } from "@/lib/utils";
+} from 'react';
+import { cn } from '@/lib/utils';
 
 function useRevealOnce() {
   const [visible, setVisible] = useState(false);
@@ -30,7 +29,7 @@ function useRevealOnce() {
           observer.disconnect();
         }
       },
-      { threshold: 0.40, rootMargin: "0px 0px -5% 0px" }
+      { threshold: 0.4, rootMargin: '0px 0px -5% 0px' },
     );
 
     observerRef.current = observer;
@@ -43,7 +42,7 @@ function useRevealOnce() {
 }
 
 function toRevealDuration(duration: number | string): string {
-  return typeof duration === "number" ? `${duration}ms` : duration;
+  return typeof duration === 'number' ? `${duration}ms` : duration;
 }
 
 type RevealStaggerProps<T extends ElementType> = {
@@ -52,12 +51,9 @@ type RevealStaggerProps<T extends ElementType> = {
   children: React.ReactNode;
   /** Animation duration per card — number (ms) or CSS time string (e.g. "0.8s"). */
   duration?: number | string;
-} & Omit<
-  ComponentPropsWithoutRef<T>,
-  "as" | "className" | "children" | "duration"
->;
+} & Omit<ComponentPropsWithoutRef<T>, 'as' | 'className' | 'children' | 'duration'>;
 
-export function RevealStagger<T extends ElementType = "div">({
+export function RevealStagger<T extends ElementType = 'div'>({
   as,
   className,
   children,
@@ -65,13 +61,13 @@ export function RevealStagger<T extends ElementType = "div">({
   style,
   ...props
 }: RevealStaggerProps<T>) {
-  const Tag = as ?? "div";
+  const Tag = as ?? 'div';
   const { ref, visible } = useRevealOnce();
 
   const revealStyle: CSSProperties = {
     ...style,
     ...(duration != null && {
-      "--reveal-duration": toRevealDuration(duration),
+      '--reveal-duration': toRevealDuration(duration),
     }),
   };
 
@@ -79,16 +75,12 @@ export function RevealStagger<T extends ElementType = "div">({
     Tag,
     {
       ref,
-      "data-visible": visible || undefined,
-      className: cn(
-        "reveal-stagger",
-        visible && "reveal-stagger--visible",
-        className
-      ),
+      'data-visible': visible || undefined,
+      className: cn('reveal-stagger', visible && 'reveal-stagger--visible', className),
       style: revealStyle,
       ...props,
     },
-    children
+    children,
   );
 }
 
@@ -98,12 +90,9 @@ type RevealProps<T extends ElementType> = {
   children: React.ReactNode;
   /** Animation duration — number (ms) or CSS time string (e.g. "0.8s"). */
   duration?: number | string;
-} & Omit<
-  ComponentPropsWithoutRef<T>,
-  "as" | "className" | "children" | "duration"
->;
+} & Omit<ComponentPropsWithoutRef<T>, 'as' | 'className' | 'children' | 'duration'>;
 
-export function Reveal<T extends ElementType = "div">({
+export function Reveal<T extends ElementType = 'div'>({
   as,
   className,
   children,
@@ -111,13 +100,13 @@ export function Reveal<T extends ElementType = "div">({
   style,
   ...props
 }: RevealProps<T>) {
-  const Tag = as ?? "div";
+  const Tag = as ?? 'div';
   const { ref, visible } = useRevealOnce();
 
   const revealStyle: CSSProperties = {
     ...style,
     ...(duration != null && {
-      "--reveal-duration": toRevealDuration(duration),
+      '--reveal-duration': toRevealDuration(duration),
     }),
   };
 
@@ -125,11 +114,11 @@ export function Reveal<T extends ElementType = "div">({
     Tag,
     {
       ref,
-      "data-visible": visible || undefined,
-      className: cn("reveal-item", visible && "reveal-item--visible", className),
+      'data-visible': visible || undefined,
+      className: cn('reveal-item', visible && 'reveal-item--visible', className),
       style: revealStyle,
       ...props,
     },
-    children
+    children,
   );
 }
