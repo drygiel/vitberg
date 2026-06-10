@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Activity } from "lucide-react";
 
-import { buttonVariants } from "@/components/ui/button";
+import { HeaderBookingCta } from "@/components/layout/header-booking-cta";
 import { mainNav, siteConfig } from "@/lib/site-config";
 import { cn } from "@/lib/utils";
 
@@ -29,7 +29,7 @@ export function Header() {
             <Link
               key={item.href}
               href={item.href}
-              className="text-sm font-semibold tracking-wide text-foreground uppercase transition-colors hover:text-primary"
+              className="text-sm font-semibold tracking-wide text-muted-foreground uppercase underline-offset-4 decoration-2 decoration-primary hover:text-primary hover:underline"
             >
               {item.label}
             </Link>
@@ -43,15 +43,7 @@ export function Header() {
           >
             {siteConfig.phoneDisplay}
           </a>
-          <Link
-            href="/#kontakt"
-            className={cn(
-              buttonVariants({ size: "lg" }),
-              "rounded-full px-4 text-xs font-bold tracking-wide uppercase"
-            )}
-          >
-            Umów wizytę
-          </Link>
+          <HeaderBookingCta />
         </div>
       </div>
 
