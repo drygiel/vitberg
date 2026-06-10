@@ -14,7 +14,7 @@ export function VisitStepsSection() {
           {visitSteps.map((step) => (
             <li
               key={step.step}
-              className="relative rounded-2xl border-2 border-primary/20 bg-card p-6 shadow-sm"
+              className="relative rounded-xl border-2 border-primary/20 bg-card p-6 shadow-sm"
             >
               <span className="mb-4 flex size-10 items-center justify-center rounded-full bg-primary text-lg font-bold text-primary-foreground">
                 {step.step}
