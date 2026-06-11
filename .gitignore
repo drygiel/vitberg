@@ -46,3 +46,7 @@ next-env.d.ts
 
 # IDE
 /.idea/
+
+# local scraped data
+/scraped/
+/scripts/scrape.js
