@@ -11,6 +11,7 @@ import Image from 'next/image';
 import { Reveal, RevealStagger } from '@/components/shared/reveal';
 import { SectionHeading } from '@/components/shared/section-heading';
 import { whyBenefits } from '@/lib/site-config';
+import { getImagePath } from '@/lib/utils';
 import './why-section.scss';
 
 const iconMap: Record<string, LucideIcon> = {
@@ -28,7 +29,7 @@ export function WhySection() {
       <div className="why-section__container">
         <Reveal duration={1000} className="why-section__image-wrapper">
           <Image
-            src="/images/active_seniors.png"
+            src={getImagePath('/images/active_seniors.png')}
             alt="Aktywna para seniorów ciesząca się życiem"
             fill
             sizes="(max-width: 1024px) 100vw, 528px"

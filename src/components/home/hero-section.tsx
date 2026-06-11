@@ -2,14 +2,14 @@ import Image from 'next/image';
 import { HashScrollLink } from '@/components/shared/hash-scroll-link';
 import { ScrollIndicator } from '@/components/shared/scroll-indicator';
 import { buttonVariants } from '@/components/ui/button';
-import { cn } from '@/lib/utils';
+import { cn, getImagePath } from '@/lib/utils';
 import './hero-section.scss';
 
 export function HeroSection() {
   return (
     <section id="hero" className="hero-section">
       <Image
-        src="/images/hero.jpg"
+        src={getImagePath('/images/hero.jpg')}
         alt="Para seniorów podczas zabiegu wibroterapii Vitberg z terapeutą"
         fill
         priority
