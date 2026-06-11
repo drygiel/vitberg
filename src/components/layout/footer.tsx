@@ -1,4 +1,4 @@
-import { Clock, MapPin, Phone } from 'lucide-react';
+import { Clock, Mail, MapPin, Phone, IdCard } from 'lucide-react';
 import Link from 'next/link';
 import { siteConfig } from '@/lib/site-config';
 import './footer.scss';
@@ -45,8 +45,40 @@ export function Footer() {
             <MapPin className="footer__icon" aria-hidden />
             <div>
               <p className="footer__label">Adres</p>
-              <p>{siteConfig.address.street}</p>
-              <p>{siteConfig.address.city}</p>
+              <a
+                href={siteConfig.address.maps.location}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="footer__nav-link"
+              >
+                {siteConfig.address.street} <br />
+                {siteConfig.address.city}
+              </a>
+            </div>
+          </div>
+
+          <div className="footer__row">
+            <IdCard className="footer__icon" aria-hidden />
+            <div>
+              <p className="footer__label">NIP</p>
+
+              <a
+                href={siteConfig.cidg}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="footer__nav-link"
+              >
+                {siteConfig.nip}
+              </a>
+              <p className="footer__label">REGON</p>
+              <a
+                href={siteConfig.cidg}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="footer__nav-link"
+              >
+                {siteConfig.regon}
+              </a>
             </div>
           </div>
         </div>
@@ -58,6 +90,15 @@ export function Footer() {
               <p className="footer__label">Telefon</p>
               <a href={`tel:${siteConfig.phone}`} className="footer__phone-link">
                 {siteConfig.phoneDisplay}
+              </a>
+            </div>
+          </div>
+          <div className="footer__row">
+            <Mail className="footer__icon" aria-hidden />
+            <div>
+              <p className="footer__label">Email</p>
+              <a href={`mailto:${siteConfig.email}`} className="footer__nav-link">
+                {siteConfig.email}
               </a>
             </div>
           </div>

@@ -14,7 +14,7 @@ export function ContactSection() {
           <div className="contact-section__map-frame">
             <iframe
               title="Mapa — Poradnia Vitberg Chełm"
-              src="https://maps.google.com/maps?q=Che%C5%82m%20Polska&t=&z=14&ie=UTF8&iwloc=&output=embed"
+              src={siteConfig.address.maps.embed}
               className="contact-section__map"
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"

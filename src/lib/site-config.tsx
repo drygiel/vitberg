@@ -2,17 +2,26 @@ import Link from 'next/link';
 
 export const siteConfig = {
   name: 'Vitberg Chełm',
-  tagline: 'Poradnia Wibroterapii',
-  phone: '+48500127768',
-  phoneDisplay: '500 127 768',
-  email: 'kontakt@vitberg.com',
+  tagline: 'Poradnia Wibroterapii', // Poradnia Vitberg w Chełmie
+  phone: '+48690148188',
+  phoneDisplay: '690 148 188',
+  email: 'krystyna.drygiel@poradniavitberg.pl',
+  nip: '5631446305',
+  regon: '110714065',
+  cidg: 'https://aplikacja.ceidg.gov.pl/ceidg/ceidg.public.ui/SearchDetails.aspx?Id=d2519dbb-8c76-4bf8-b154-0d64d9387c72',
   address: {
-    street: 'ul. Lubelska 15',
+    street: 'ul. Zachodnia 10/1',
     city: '22-100 Chełm',
+    maps: {
+      location: 'https://www.google.com/maps/place/Zachodnia+10,+22-100+Chełm',
+      directions: 'https://www.google.com/maps/dir/Current+Location/Zachodnia+10%2F1,+22-100+Chełm',
+      embed:
+        'https://maps.google.com/maps?q=Zachodnia+10,+22-100+Chełm&z=13&ie=UTF8&iwloc=&output=embed',
+    },
   },
-  hours: 'Poniedziałek – Piątek: 8:00 – 16:00',
+  hours: 'Poniedziałek – Piątek: 08:30 - 15:00',
   social: {
-    facebook: 'https://pl-pl.facebook.com/vitberg',
+    facebook: 'https://www.facebook.com/PoradniaVitbergChelm',
     instagram: '',
     youtube: '',
   },

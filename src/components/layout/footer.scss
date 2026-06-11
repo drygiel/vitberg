@@ -54,7 +54,7 @@
 }
 
 .footer__nav-link {
-    @apply hover:text-white;
+    @apply hover:text-white underline-offset-2 hover:underline;
 }
 
 .footer__copyright {
