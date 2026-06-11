@@ -30,13 +30,13 @@ export function HashScrollLink({
       return;
     }
 
-    const targetUrl = new URL(hrefValue, window.location.origin);
-    const hash = targetUrl.hash;
-
-    if (!hash || targetUrl.pathname !== window.location.pathname) {
+    // Extract hash directly from href to support basePath routing
+    const hashIndex = hrefValue.indexOf('#');
+    if (hashIndex === -1) {
       return;
     }
 
+    const hash = hrefValue.substring(hashIndex);
     const targetId = decodeURIComponent(hash.slice(1));
     const targetElement = document.getElementById(targetId);
 
