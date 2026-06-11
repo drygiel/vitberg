@@ -1,8 +1,12 @@
 ﻿@reference "../../app/globals.css";
 
 .scroll-indicator {
-    @apply pointer-events-none absolute inset-x-0 bottom-15 z-20 mx-auto flex w-fit flex-col items-center gap-1 text-primary;
+    @apply flex-col items-center gap-1 text-primary;
+    @apply pointer-events-none absolute inset-x-0 z-20 mx-auto flex w-fit;
+    @apply bottom-30 lg:bottom-20;
     transition: opacity 180ms ease, transform 180ms ease;
+    background-color: rgb(255 255 255 / 0.25);
+    box-shadow: 0 0 18px rgb(255 255 255 / 0.65);
 }
 
 .scroll-indicator.is-hidden {
